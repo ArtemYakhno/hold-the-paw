@@ -7,9 +7,9 @@ Django==6.0.2
 django-filter==25.2
 django-stubs==5.2.9
 django-stubs-ext==5.2.9
-djangоrestframework==3.16.1
-djangоrestframework-stubs==3.16.8
-djangоrestframework_simplejwt==5.5.1
+djangorestframework==3.16.1
+djangorestframework-stubs==3.16.8
+djangorestframework_simplejwt==5.5.1
 drf-spectacular==0.29.0
 inflection==0.5.1
 jsonschema==4.26.0
