@@ -21,6 +21,11 @@ from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView, Sp
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 from django.conf import settings
 from django.conf.urls.static import static
+from django.http import JsonResponse
+
+
+def health_check(request):
+    return JsonResponse({"status": "ok"})
 
 api_v1_patterns = [
     path("pets/", include("pets.urls", namespace="pets")),
@@ -41,7 +46,7 @@ api_v1_patterns = [
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/v1/", include(api_v1_patterns)),
-
+    path("health/", health_check, name="health-check"),
 ]
 
 if settings.DEBUG:
